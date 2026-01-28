@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #97d5ee, #6b6d6d);
+}
+
+.form-container {
+    width: 420px;
+    background: #ffffff;
+    padding: 35px 40px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #6a5acd;
+    font-size: 24px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+label {
+    width: 120px;
+    font-weight: 600;
+    color: #333;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="url"] {
+    width: 220px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+}
+
+.age-wrapper {
+    display: flex;
+    align-items: center;
+    width: 220px;
+}
+
+input[type="range"] {
+    flex: 1;
+    accent-color: #6a5acd;
+}
+
+output {
+    width: 30px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #6a5acd;
+}
+
+button {
+    display: block;
+    margin: 30px auto 0;
+    padding: 12px 35px;
+    background: #6a5acd;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5a4bcf;
+}

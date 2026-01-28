@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2 class="form-title">Sign Up Form</h2>
+
+    <form>
+        <div class="row">
+            <label>Name:</label>
+            <input type="text" placeholder="e.g. John Doe" required>
+        </div>
+
+        <div class="row">
+            <label>Date of Birth:</label>
+            <input type="date" placeholder="mm/dd/yyyy" required>
+        </div>
+
+        <div class="row">
+            <label>Age:</label>
+            <div class="age-wrapper">
+                <input type="range" min="18" max="60" value="18" id="age"
+                       oninput="updateAge(this.value)">
+                <output id="ageOutput">18</output>
+            </div>
+        </div>
+
+        <!-- Email always visible -->
+        <div class="row" id="emailRow">
+            <label>Email:</label>
+            <input type="email" placeholder="e.g. john@example.com" required>
+        </div>
+
+        <!-- Website shown only if age > 25 -->
+        <div class="row" id="websiteRow">
+            <label>Website:</label>
+            <input type="url" placeholder="e.g. https://www.example.com">
+        </div>
+
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+
+<script>
+    function updateAge(age) {
+        document.getElementById("ageOutput").value = age;
+
+        const websiteRow = document.getElementById("websiteRow");
+
+        if (age > 25) {
+            websiteRow.style.display = "flex";
+        } else {
+            websiteRow.style.display = "none";
+        }
+    }
+
+    // Initial state
+    updateAge(18);
+</script>
+
+</body>
+</html>
